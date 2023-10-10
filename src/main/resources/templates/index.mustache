@@ -1,0 +1,53 @@
+{{>layout/header}}
+<article>
+    <!-- Post header-->
+    <header class="mb-4">
+        <!-- Post title-->
+        <h1 class="fw-bolder mb-1">게시글</h1>
+    </header>
+    <br>
+    <br>
+    <div class="container">
+        <div class="h4 pb-2 mb-4 text-primary border-bottom border-primary">
+            게시글목록
+        </div>
+
+        <a class="btn btn-outline-success" href="/posts/save">게시글 등록하기</a>
+
+        {{#userName}}
+            로그인한 사용자명 : {{userName}}
+            <a href="/logout" class="btn btn-info active" role="button">로그아웃</a>
+        {{/userName}}
+
+
+        {{^userName}}
+            <a href="/oauth2/authorization/google" class="btn btn-info active" role="button">구글로그인</a>
+
+            <a href="/oauth2/authorization/naver" class="btn btn-info active" role="button">네이버로그인</a>
+        {{/userName}}
+
+        <table class="table table-hover">
+            <tr>
+                <th scope="col" width="150px">번호</th>
+                <th scope="col" width="300px">제목</th>
+                <th scope="col" width="200px">작성자</th>
+                <th scope="col" width="200px">작성일자</th>
+                <th scope="col" width="200px">수정일자</th>
+
+            </tr>
+
+            {{#posts}}
+            <tr >
+                <th scope="row">{{id}}</th>
+                <td><a href="/posts/update/{{id}}">{{title}}</a></td>
+                <td>{{author}}</td>
+                <td>{{createdDate}}</td>
+                <td>{{modifiedDate}}</td>
+            </tr>
+            {{/posts}}
+        </table>
+    </div>
+
+</article>
+
+{{>layout/footer}}

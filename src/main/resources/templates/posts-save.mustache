@@ -1,0 +1,49 @@
+{{>layout/header}}
+<article>
+    <!-- Post header-->
+    <header class="mb-4">
+        <!-- Post title-->
+        <h1 class="fw-bolder mb-1">게시글</h1>
+    </header>
+    <br>
+    <br>
+    <div class="container">
+        <div class="h4 pb-2 mb-4 text-primary border-bottom border-primary">
+            게시글등록
+        </div>
+
+        <a class="btn btn-outline-success" href="/">게시글 목록으로</a>
+        <form>
+        <div class="mb-3">
+            게시글제목
+            <input class="form-control" type="text"  name="title" id="title"  placeholder="제목을 작성해주세요" required/>
+        </div>
+        <br>
+        <br>
+
+        <div class="mb-3">
+            게시글작성자
+            <input class="form-control" type="text"  name="author"  id="author"  placeholder="작성자를 입력해주세요" required/>
+        </div>
+        <br>
+        <br>
+
+        <div class="mb-3">
+            게시글내용
+            <textarea class="form-control" name="content" id="content" placeholder="내용을 작성해주세요" required></textarea>
+        </div>
+        <br>
+
+
+        <br>
+        <div class="col-12" style="text-align: center;">
+            <a role="button" href="/" style="display :inline-block;" class="btn btn-outline-secondary">취소</a>
+            <button type="submit" style="display :inline-block;" class="btn btn-outline-primary" id="registerBtn">게시글 등록하기</button>
+        </div>
+
+        </form>
+    </div>
+
+</article>
+
+{{>layout/footer}}

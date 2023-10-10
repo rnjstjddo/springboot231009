@@ -29,5 +29,22 @@ repositories {
 dependencies {
     compile('org.springframework.boot:spring-boot-starter-web')
     testCompile('org.springframework.boot:spring-boot-starter-test')
+    compile('org.projectlombok:lombok')
+    //Spring Data JPA
+    compile('org.springframework.boot:spring-boot-starter-data-jpa')
+    compile('com.h2database:h2')
+    
+    //머스테치 클라이언트 템플릿엔지
+    compile('org.springframework.boot:spring-boot-starter-mustache')
 
+    implementation('org.springframework.boot:spring-boot-devtools')
+
+    //시큐리티의존성
+    compile('org.springframework.boot:spring-boot-starter-oauth2-client')
+
+    //세션저장소
+    compile('org.springframework.session:spring-session-jdbc')
+
+    //테스트
+    compile('org.springframework.security:spring-security-test')
 }
