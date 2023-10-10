@@ -47,4 +47,7 @@ dependencies {
 
     //테스트
     compile('org.springframework.security:spring-security-test')
+
+    //RDS MariaDB
+    compile('org.mariadb.jdbc:mariadb-java-client')
 }
